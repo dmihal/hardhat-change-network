@@ -1,5 +1,4 @@
 import { extendEnvironment } from "hardhat/config";
-import { lazyObject } from "hardhat/plugins";
 import { createProvider } from "hardhat/internal/core/providers/construction";
 
 // This import is needed to let the TypeScript compiler know that it should include your type
