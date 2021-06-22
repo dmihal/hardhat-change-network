@@ -11,7 +11,7 @@ extendEnvironment((hre) => {
   // We add a field to the Hardhat Runtime Environment here.
   // We use lazyObject to avoid initializing things until they are actually
   // needed.
-  hre.changeNetwork = lazyObject(() => function changeNetwork(newNetwork: string) {
+  hre.changeNetwork = function changeNetwork(newNetwork: string) {
     if (!hre.config.networks[newNetwork]) {
       throw new Error(`changeNetwork: Couldn't find network '${newNetwork}'`);
     }
@@ -22,5 +22,5 @@ extendEnvironment((hre) => {
       hre.config.paths,
       hre.artifacts,
     );
-  });
+  };
 });
