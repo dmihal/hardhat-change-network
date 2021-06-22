@@ -1,14 +1,10 @@
 # hardhat-change-network
 
-_A one line description of the plugin_
+Allows changing the current network in Hardhat.
 
-[Hardhat](https://hardhat.org) plugin example. 
+Useful for multi-chain projects, where switching between two networks in a script may be desirable.
 
-## What
-
-<_A longer, one paragraph, description of the plugin_>
-
-This plugin will help you with world domination by implementing a simple tic-tac-toe in the terminal.
+_Warning: This is a bit of a hack, some modules may break._
 
 ## Installation
 
@@ -28,18 +24,8 @@ Or if you are using TypeScript, in your `hardhat.config.ts`:
 import "hardhat-change-network";
 ```
 
-## Environment extensions
-
-<_A description of each extension to the Hardhat Runtime Environment_>
-
-This plugin extends the Hardhat Runtime Environment by adding an `example` field
-whose type is `ExampleHardhatRuntimeEnvironmentField`.
-
 ## Usage
 
-<_A description of how to use this plugin. How to use the tasks if there are any, etc._>
-
-There are no additional steps you need to take for this plugin to work.
-
-Install it and access ethers through the Hardhat Runtime Environment anywhere
-you need it (tasks, scripts, tests, etc).
+```javascript
+hre.changeNetwork('goerli');
+```
