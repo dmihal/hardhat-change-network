@@ -23,5 +23,10 @@ extendEnvironment((hre) => {
       this.config.paths,
       this.artifacts,
     );
+
+    if ((this as any).ethers) {
+      const { EthersProviderWrapper } = require("hardhat-ethers/internal/ethers-provider-wrapper");
+      (this as any).ethers.provider = new EthersProviderWrapper(this.network.provider);
+    }
   };
 });
