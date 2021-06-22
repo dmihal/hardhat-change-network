@@ -11,15 +11,17 @@ extendEnvironment((hre) => {
   // We use lazyObject to avoid initializing things until they are actually
   // needed.
   hre.changeNetwork = function changeNetwork(newNetwork: string) {
-    if (!hre.config.networks[newNetwork]) {
+    if (!this.config.networks[newNetwork]) {
       throw new Error(`changeNetwork: Couldn't find network '${newNetwork}'`);
     }
 
-    hre.network.provider = createProvider(
+    this.network.name = newNetwork;
+    this.network.config = this.config.networks[newNetwork];
+    this.network.provider = createProvider(
       newNetwork,
-      hre.config.networks[newNetwork],
-      hre.config.paths,
-      hre.artifacts,
+      this.config.networks[newNetwork],
+      this.config.paths,
+      this.artifacts,
     );
   };
 });
