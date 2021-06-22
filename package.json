@@ -1,6 +1,6 @@
 {
   "name": "hardhat-change-network",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Hardhat TypeScript plugin boilerplate",
   "repository": "github:dmihal/hardhat-change-network",
   "author": "David Mihal",
