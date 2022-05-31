@@ -1,6 +1,6 @@
 import { extendEnvironment } from "hardhat/config";
 import { createProvider } from "hardhat/internal/core/providers/construction";
-  import { EthereumProvider } from "hardhat/types/provider";
+import { EthereumProvider } from "hardhat/types/provider";
 
 // This import is needed to let the TypeScript compiler know that it should include your type
 // extensions in your npm package's types file.
@@ -23,7 +23,7 @@ extendEnvironment((hre) => {
       );
     }
     return providers[name];
-  }
+  };
 
   hre.changeNetwork = function changeNetwork(newNetwork: string) {
     if (!this.config.networks[newNetwork]) {
