@@ -39,7 +39,7 @@ extendEnvironment((hre) => {
     this.network.provider = this.getProvider(newNetwork);
 
     if ((this as any).ethers) {
-      const { EthersProviderWrapper } = require("@nomiclabs/hardhat-ethers/internal/ethers-provider-wrapper");
+      const { EthersProviderWrapper } = require("@nomicfoundation/hardhat-ethers/internal/ethers-provider-wrapper");
       (this as any).ethers.provider = new EthersProviderWrapper(this.network.provider);
     }
   };
