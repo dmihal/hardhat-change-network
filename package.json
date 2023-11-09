@@ -1,6 +1,6 @@
 {
   "name": "hardhat-change-network",
-  "version": "0.0.7",
+  "version": "0.1.0",
   "description": "Hardhat TypeScript plugin boilerplate",
   "repository": "github:dmihal/hardhat-change-network",
   "author": "David Mihal",
@@ -32,7 +32,7 @@
     "@types/mocha": "^5.2.6",
     "@types/node": "^8.10.38",
     "chai": "^4.2.0",
-    "hardhat": "^2.0.0",
+    "hardhat": "^2.19.0",
     "mocha": "^7.1.2",
     "prettier": "2.0.5",
     "ts-node": "^8.1.0",
@@ -42,6 +42,6 @@
     "typescript": "^4.0.3"
   },
   "peerDependencies": {
-    "hardhat": "^2.0.0"
+    "hardhat": "^2.19.0"
   }
 }
